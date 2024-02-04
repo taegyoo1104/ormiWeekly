@@ -38,7 +38,7 @@ public class LargeAppliance extends Product implements DeliveryChargeCalculator{
         } else if(getPrice().compareTo(BigDecimal.valueOf(100000)) == -1) {
             additionalFee = BigDecimal.valueOf(-1000);
         } else {
-            additionalFee = BigDecimal.ZERO;
+            additionalFee = feeByWeight.negate();
         }
 
         BigDecimal totalFee = feeByWeight.add(additionalFee);
