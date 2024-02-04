@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // 무게 11, 가격 10,000원 -> 기본배송비 10000원 + 추가 배송비 10000원 = 20000만원
+        // 무게 11, 가격 10,000원 -> 기본배송비 10000원 + 추가 배송비 10000원 = 20000원
         Beauty beauty = new Beauty("뷰티1", BigDecimal.valueOf(10000), 11.0);
         beauty.getDeliveryCharge();
 
