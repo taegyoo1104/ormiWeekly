@@ -26,6 +26,7 @@ public class LargeAppliance extends Product implements DeliveryChargeCalculator{
         BigDecimal additionalFee = BigDecimal.ZERO;
 
         if(getWeight() < 3.0) {
+
             feeByWeight = BigDecimal.valueOf(1000);
         } else if(getWeight() < 10.0) {
             feeByWeight = BigDecimal.valueOf(5000);

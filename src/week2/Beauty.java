@@ -22,6 +22,7 @@ public class Beauty extends Product implements DeliveryChargeCalculator{
 
     @Override
     public void getDeliveryCharge() {
+
         BigDecimal feeByWeight = BigDecimal.ZERO;
         BigDecimal additionalFee = BigDecimal.ZERO;
 
