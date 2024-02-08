@@ -9,10 +9,13 @@ public class Main {
         AddressBook addressBook = new AddressBook(new ArrayList<>());
         Scanner sc = new Scanner(System.in);
 
+        // 5가 입력되기 전에는 프로그램이 종료되지 않게
         boolean flag = true;
         while(flag) {
             indexOfProgram();
             int command = sc.nextInt();
+
+            // 1~5 사이의 command가 입력되지 않을 경우 첫 화면으로 돌아감
             if(command <= 0 || command >= 6) {
                 System.out.println("1~5 사이의 숫자를 입력해주세요.");
                 System.out.println();
@@ -31,16 +34,18 @@ public class Main {
                     break;
                 case 4:
                     System.out.print("검색할 이름을 입력하세요: ");
-                    sc.nextLine();
+                    sc.nextLine(); // 개행문자 제거
                     String searchForName = sc.nextLine();
                     addressBook.searchContact(searchForName);
                     break;
                 case 5:
+                    // flag를 false로 만들어서 무한루프 종료
                     System.out.println("프로그램을 종료합니다.");
                     flag = false;
             }
         }
     }
+    // 프로그램의 맨 첫 화면
     public static void indexOfProgram() {
         System.out.println("1. 비즈니스 연락처 추가");
         System.out.println("2. 개인 연락처 추가");
@@ -49,6 +54,7 @@ public class Main {
         System.out.println("5. 종료");
         System.out.print("메뉴를 선택해주세요: ");
     }
+    // 비지니스 연락처 추가
     public static BusinessContact addBusinessContact() {
         Scanner sc = new Scanner(System.in);
         BusinessContact bc;
@@ -62,9 +68,10 @@ public class Main {
         String company = sc.nextLine();
         System.out.println();
         bc = new BusinessContact(name, phoneNumber, company);
+
         return bc;
     }
-
+    // 개인 연락처 추가
     public static PersonalContact addPersonalContact() {
         Scanner sc = new Scanner(System.in);
         PersonalContact pc;
@@ -78,6 +85,7 @@ public class Main {
         String relationship = sc.nextLine();
         System.out.println();
         pc = new PersonalContact(name, phoneNumber, relationship);
+
         return pc;
     }
 
