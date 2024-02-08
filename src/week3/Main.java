@@ -15,13 +15,6 @@ public class Main {
             indexOfProgram();
             int command = sc.nextInt();
 
-            // 1~5 사이의 command가 입력되지 않을 경우 첫 화면으로 돌아감
-            if(command <= 0 || command >= 6) {
-                System.out.println("1~5 사이의 숫자를 입력해주세요.");
-                System.out.println();
-                continue;
-            }
-
             switch (command) {
                 case 1:
                     addressBook.addToBook(addBusinessContact());
@@ -42,6 +35,9 @@ public class Main {
                     // flag를 false로 만들어서 무한루프 종료
                     System.out.println("프로그램을 종료합니다.");
                     flag = false;
+                default:
+                    System.out.println();
+                    System.out.println("1~5 사이의 숫자를 입력해주세요. \n" );
             }
         }
     }
