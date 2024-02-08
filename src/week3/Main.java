@@ -28,8 +28,8 @@ public class Main {
                 case 4:
                     System.out.print("검색할 이름을 입력하세요: ");
                     sc.nextLine(); // 개행문자 제거
-                    String searchForName = sc.nextLine();
-                    addressBook.searchContact(searchForName);
+                    String name = sc.nextLine();
+                    addressBook.searchContact(name);
                     break;
                 case 5:
                     // flag를 false로 만들어서 무한루프 종료
