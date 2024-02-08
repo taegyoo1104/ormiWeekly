@@ -35,6 +35,7 @@ public class Main {
                     // flag를 false로 만들어서 무한루프 종료
                     System.out.println("프로그램을 종료합니다.");
                     flag = false;
+                    break;
                 default:
                     System.out.println();
                     System.out.println("1~5 사이의 숫자를 입력해주세요. \n" );
